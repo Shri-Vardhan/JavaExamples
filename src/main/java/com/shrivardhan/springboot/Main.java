@@ -1,5 +1,5 @@
 package com.shrivardhan.springboot;
-
+import com.shrivardhan.connector.DBconnection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.sql.Connection;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.shrivardhan.springboot", "com.shrivardhan.connector"})
 public class Main implements CommandLineRunner {
 
     @Autowired

@@ -1,4 +1,4 @@
-package com.shrivardhan.springboot;
+package com.shrivardhan.connector;
 
 import org.springframework.stereotype.Component;
 
