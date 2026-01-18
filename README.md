@@ -1,29 +1,30 @@
-# README #
+Spring Boot JDBC REST API – Enterprise Application
+Overview
+--------
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This project is an enterprise-grade Spring Boot REST API built using Spring JDBC for database interactions. It is designed following real-world company standards with clear separation of environments (dev / prod), secure configuration management, containerized deployment using Docker, and CI/CD integration via Jenkins.
 
-### What is this repository for? ###
+The application exposes RESTful endpoints, connects to a relational database using JDBC templates, and supports profile-based configuration for development and production environments.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Technology Stack
+----------------
 
-### How do I get set up? ###
+Java: 17
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Spring Boot: 3.x
 
-### Contribution guidelines ###
+Spring JDBC (JdbcTemplate)
 
-* Writing tests
-* Code review
-* Other guidelines
+REST API (Spring Web)
 
-### Who do I talk to? ###
+Database: Oracle Pluggable DB (Dev-Server)
 
-* Repo owner or admin
-* Other community or team contact
+Build Tool: Gradle
+
+Containerization: Docker
+
+CI/CD: Jenkins
+
+Config Files: yml , json
+
+Version Control: Git (Bitbucket / GitHub)
