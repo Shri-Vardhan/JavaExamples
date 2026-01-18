@@ -1,29 +1,30 @@
-# README #
+JDBC Configuration with Spring Profiles
 
-This README would normally document whatever steps are necessary to get your application up and running.
+The application uses Spring Profiles to manage different JDBC configurations for development and production environments.
 
-### What is this repository for? ###
+Profiles Supported
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+dev – Local / development database
 
-### How do I get set up? ###
+prod – Production database
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Activate Profile
+Run with DEV profile
+java -jar example-rest-api.jar --spring.profiles.active=dev
 
-### Contribution guidelines ###
+Run with PROD profile
+java -jar example-rest-api.jar --spring.profiles.active=prod
 
-* Writing tests
-* Code review
-* Other guidelines
+Default Behavior
 
-### Who do I talk to? ###
+If no profile is specified, Spring uses application.properties
 
-* Repo owner or admin
-* Other community or team contact
+Recommended: Always specify profile explicitly in non-local environments
+
+Notes
+
+Database connections are auto-configured via Spring Boot JDBC
+
+No code changes required when switching environments
+
+Credentials for production should be managed securely (env variables / vault)
