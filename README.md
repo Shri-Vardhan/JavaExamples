@@ -1,28 +1,28 @@
 JDBC Configuration with Spring Profiles
+---------------------------------------
 
 The application uses Spring Profiles to manage different JDBC configurations for development and production environments.
 
-Profiles Supported
+Profiles Supported:
+------------------
 
 dev – Local / development database
 
 prod – Production database
 
-Activate Profile
+Activate Profile:
+----------------
 Run with DEV profile
 java -jar example-rest-api.jar --spring.profiles.active=dev
 
 Run with PROD profile
 java -jar example-rest-api.jar --spring.profiles.active=prod
 
-Default Behavior
-
+Default Behavior:
+----------------
 If no profile is specified, Spring uses application.properties
 
 Recommended: Always specify profile explicitly in non-local environments
-
-Notes
-
 Database connections are auto-configured via Spring Boot JDBC
 
 No code changes required when switching environments
