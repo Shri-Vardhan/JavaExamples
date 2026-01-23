@@ -1,5 +1,5 @@
 spring:
   datasource:
-    username: dev_user
-    password: dev_pass
+    username: vnrvjiet
+    password: vnr
     driver-class-name: oracle.jdbc.OracleDriver

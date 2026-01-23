@@ -1,29 +1,15 @@
 # README #
+Total profiles = 3 (default, prod and dev)
+If profile not specified in execution command, then system will load application-default.yml (configured in .pro file)
 
-This README would normally document whatever steps are necessary to get your application up and running.
+### Commands to execute on the terminal ###
 
-### What is this repository for? ###
+### Method 01 - Creating Jar then executing ###
+./gradlew  clean build  
+java -jar build\libs\javaexamples-1.0-SNAPSHOT.jar
+java -jar build\libs\javaexamples-1.0-SNAPSHOT.jar --spring.profiles.active=dev
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+### Method 02 - With out jar ###
+./gradlew bootRun
+./gradlew bootRun --args='--spring.profiles.active=dev'
+./gradlew bootRun --args='--spring.profiles.active=prod'
