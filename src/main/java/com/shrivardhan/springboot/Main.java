@@ -24,7 +24,7 @@ public class Main {
         System.out.println("Username = " + environment.getProperty("spring.datasource.username"));
         System.out.println("Password = " + environment.getProperty("spring.datasource.password"));
 
-        try {
+        try {  
             jdbcTemplate.execute(sql);
         } catch (Exception exception) {
             System.out.println("Connection error");
