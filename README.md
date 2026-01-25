@@ -21,6 +21,8 @@ Database: Oracle Pluggable DB (Dev-Server)
 
 Build Tool: Gradle
 
+Logging Tool: log4j | slf4j
+
 Containerization: Docker
 
 CI/CD: Jenkins
