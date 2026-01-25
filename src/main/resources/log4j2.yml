@@ -1,0 +1,16 @@
+Configuration:
+  status: trace
+
+  Appenders:
+    File:
+      name: FILE
+      fileName: ${sys:user.dir}/logs/app.log
+      layout:
+        PatternLayout:
+          pattern: "%d{HH:mm:ss} %-5p %c - %m%n"
+
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: FILE

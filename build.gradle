@@ -19,16 +19,35 @@ java {
 }
 
 dependencies {
-    // Spring Boot Core
-    implementation 'org.springframework.boot:spring-boot-starter'
+    // Spring Boot WITHOUT Logback
+    implementation('org.springframework.boot:spring-boot-starter') {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
 
-    // Spring JDBC
-    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    // JDBC (inherits logging exclusion)
+    implementation('org.springframework.boot:spring-boot-starter-jdbc') {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+
+    // Oracle driver
     runtimeOnly 'com.oracle.database.jdbc:ojdbc11:23.3.0.23.09'
 
-    // Testing
+    // Log4j2 (ONLY logging system)
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
 }
+
+configurations.all {
+    exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    exclude group: 'ch.qos.logback', module: 'logback-classic'
+    exclude group: 'ch.qos.logback', module: 'logback-core'
+}
+
 
 test {
     useJUnitPlatform()
