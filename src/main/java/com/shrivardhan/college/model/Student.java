@@ -1,7 +1,6 @@
 package com.shrivardhan.college.model;
 
 public class Student {
-
     private Long id;
     private String name;
     private Integer age;
