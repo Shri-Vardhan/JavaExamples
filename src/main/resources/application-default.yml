@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    username: vnrvjiet
+    password: vnr
+    driver-class-name: oracle.jdbc.OracleDriver

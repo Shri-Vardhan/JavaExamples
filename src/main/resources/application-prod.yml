@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    username: prod_user
+    password: prod_pass
+    driver-class-name: oracle.jdbc.OracleDriver
